@@ -1,4 +1,5 @@
-This Code of Conduct outlines expected behavior for users of the student feedback management application, emphasizing respect, constructive feedback, and responsible use of the platform to foster a positive and productive environment. 
+This Code of Conduct outlines expected behavior for users of the student feedback management application, emphasizing respect, constructive feedback, and responsible use of the platform to foster a positive and productive environment.
+> You cannot have a proud and chivalrous spirit if your conduct is mean and paltry.
 ## Code of Conduct for Student Feedback Management Application
 ### Our Commitment
 As a community, we are committed to creating a respectful and inclusive environment where all users can contribute their feedback constructively and productively. We pledge to treat each other with dignity and respect, regardless of background, experience, or opinion. 
