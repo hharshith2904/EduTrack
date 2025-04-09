@@ -1,0 +1,48 @@
+# tests/test_feedback_summary.py
+
+import unittest
+from feedback_summary import summarize_feedback
+
+
+class TestFeedbackSummary(unittest.TestCase):
+    def test_all_sentiments_present(self):
+        data = [
+            {"sentiment": "positive"},
+            {"sentiment": "neutral"},
+            {"sentiment": "negative"},
+            {"sentiment": "positive"},
+            {"sentiment": "neutral"}
+        ]
+        result = summarize_feedback(data)
+        self.assertEqual(result["total_feedback"], 5)
+        self.assertEqual(result["positive"], 2)
+        self.assertEqual(result["neutral"], 2)
+        self.assertEqual(result["negative"], 1)
+
+    def test_empty_feedback_list(self):
+        result = summarize_feedback([])
+        self.assertEqual(result["total_feedback"], 0)
+        self.assertEqual(result["positive"], 0)
+        self.assertEqual(result["neutral"], 0)
+        self.assertEqual(result["negative"], 0)
+
+    def test_missing_sentiment_field(self):
+        data = [{"feedback": "Great class!"}, {"sentiment": "positive"}]
+        result = summarize_feedback(data)
+        self.assertEqual(result["total_feedback"], 1)
+        self.assertEqual(result["positive"], 1)
+
+    def test_case_insensitivity(self):
+        data = [
+            {"sentiment": "Positive"},
+            {"sentiment": "NEUTRAL"},
+            {"sentiment": "negative"}
+        ]
+        result = summarize_feedback(data)
+        self.assertEqual(result["positive"], 1)
+        self.assertEqual(result["neutral"], 1)
+        self.assertEqual(result["negative"], 1)
+
+
+if __name__ == "__main__":
+    unittest.main()
