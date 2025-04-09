@@ -1,5 +1,7 @@
 # EduTrack
+> Your Voice, Our Platform. Easy Feedback, Better Results.
 ## Student Feedback Manager
+This student feedback manager application streamlines the collection and analysis of student feedback, empowering educators to improve teaching and learning experiences by providing a centralized, efficient platform for gathering and managing student opinions.
 ### This app includes:
 1. Feedback Entry - Collects student feedback
 2. Score calculator - Computes the average score
